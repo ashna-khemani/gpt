@@ -1,4 +1,8 @@
 *Video: https://www.youtube.com/watch?v=c-g6epk3fFE*
+## Secret key
+Get a secret key from OpenAI
+Paste it into a file `key.txt`
+
 ## How to get `openai` to work (using virtualenv)
 Check pip3 is latest version
 `virtualenv .env`
