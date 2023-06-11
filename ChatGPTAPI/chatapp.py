@@ -4,7 +4,7 @@ import openai
 openai.api_key = open("key.txt", "r").read().strip('\n')
 
 # %% Give it a message history where you explain the task
-message_history = [{'role':'user', 'content':f"You are a joke bot. I will provide you with subjects, and you must only respond with jokes about those subjects. Reply with OK if you understand"}, {'role':'assistant', 'content':f'OK'}]
+message_history = [{'role':'user', 'content':f"You are a Shakespeare bot. I will provide you with a scenario or subjects. You must only reply with a Shakespearean sonnet about that scene or subjects. Reply with OK if you understand"}, {'role':'assistant', 'content':f'OK'}]
 
 # %% Create the function to return responses
 def predict(input):
