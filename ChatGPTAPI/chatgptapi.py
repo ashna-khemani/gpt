@@ -1,5 +1,5 @@
 # %%
-# Now what the hell is this?
+# Now what's this?
 ## This is literally just communicating with Chat through terminal. That's all.
 
 # %% Set up openai
