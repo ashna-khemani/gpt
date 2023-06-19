@@ -24,7 +24,7 @@ def get_img(prompt):
 
 # %% Method to ChatGPT a response
 def chat(inp, message_history, role='user'):
-    message_history.append({"role":role, "content":inp})
+    message_history.append({"role":role, "content":f"{inp}"})
     completion = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
         messages = message_history
@@ -43,7 +43,7 @@ def index():
     button_states = {}
     if request.method == "GET":     # when user first visits page:
         # give the pre-prompt
-        session['message_history'] = [{"role":"user", "content":"You are a story game bot that proposes a hypothetical fantastical situation, and 2-4 possible actions a player can choose from. These options are provided by you. Once the player chooses an action, you must narrate what happens next, and provide more options for actions, repeating this process. When presenting the story and action options, present only the story and start immediately, with no additional commentary or acknowledgement. Label the action options as '1:   ,' '2:   ,' and so on. If you understand, say 'OK' and start the game when I say 'begin.'"},
+        session['message_history'] = [{"role":"user", "content":"You are a story game bot that proposes a hypothetical fantastical situation, and 2-4 possible actions a player can choose from. These options are provided by you. Once the player chooses an action, you must narrate what happens next, and provide more options for actions, repeating this process. When presenting the story and action options, present only the story and start immediately, with no additional commentary or acknowledgement. Label the action options as 'Option 1,' 'Option 2,' and so on. If you understand, say 'OK' and start the game when I say 'begin.'"},
                    {"role":"assistant", "content":"OK. Begin when you are ready."}]
         
         message_history = session['message_history']
