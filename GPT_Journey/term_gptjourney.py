@@ -1,6 +1,7 @@
 # Journey through terminal
 
 import openai
+import emoji
 openai.api_key = open('key.txt', 'r').read().strip("\n")
 
 def chat(inp, message_history, role='user'):
@@ -22,6 +23,6 @@ reply_content, message_history = chat("begin", message_history)
 
 for i in range(3):
     print("\n", reply_content)
-    next_inp = input("\nEnter response: ")
+    next_inp = input(emoji.emojize("\nEnter response :backhand_index_pointing_right:  "))
     reply_content, message_history = chat(reply_content, message_history)
     
